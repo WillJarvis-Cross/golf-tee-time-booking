@@ -1,32 +1,17 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import { withAuthenticator } from "@aws-amplify/ui-react";
+import "@aws-amplify/ui-react/styles.css";
+import Button from "@mui/material/Button";
 
-import "./App.css";
-
-function App() {
-  const [count, setCount] = useState(0);
-
+function App({ signOut, user }: any) {
   return (
-    <>
-      <div>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <h1>Welcome {user?.username}</h1>
+      <Button variant="contained" onClick={signOut}>
+        Sign Out
+      </Button>
+    </div>
   );
 }
 
-export default App;
+// HOC adds login/sign-up automatically
+export default withAuthenticator(App);

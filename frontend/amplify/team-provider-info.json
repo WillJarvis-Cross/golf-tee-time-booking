@@ -1,0 +1,27 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-golfapp-dev-80772-authRole",
+      "UnauthRoleArn": "arn:aws:iam::905444444452:role/amplify-golfapp-dev-80772-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::905444444452:role/amplify-golfapp-dev-80772-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-golfapp-dev-80772-deployment",
+      "UnauthRoleName": "amplify-golfapp-dev-80772-unauthRole",
+      "StackName": "amplify-golfapp-dev-80772",
+      "StackId": "arn:aws:cloudformation:us-east-2:905444444452:stack/amplify-golfapp-dev-80772/ec3692d0-90e7-11f0-ba8c-028c98a97213",
+      "AmplifyAppId": "d26sg084ptz7fn"
+    },
+    "categories": {
+      "auth": {
+        "golfappe7537aa2": {}
+      },
+      "function": {
+        "golfappe7537aa2CustomMessage": {
+          "REDIRECTURL": "https://main.d2225zwmg3td0e.amplifyapp.com/",
+          "EMAILSUBJECT": "Please Verify Email Address",
+          "EMAILMESSAGE": "Verification Link"
+        }
+      }
+    }
+  }
+}

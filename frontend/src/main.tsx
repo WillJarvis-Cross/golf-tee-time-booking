@@ -4,9 +4,16 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
 
-import outputs from "../amplify_outputs.json";
+let outputs;
+try {
+  outputs = await import("../amplify_outputs.json");
+} catch {
+  outputs = {}; // Fallback during build
+}
 import { Amplify } from "aws-amplify";
-Amplify.configure(outputs);
+if (outputs.default) {
+  Amplify.configure(outputs.default);
+}
 
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import { theme } from "./themes";

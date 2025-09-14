@@ -89,7 +89,7 @@ export function UserDashboard() {
 
       <Grid container spacing={3}>
         {/* My Tee Times Section */}
-        <Grid item xs={12} md={8}>
+        <Grid xs={12} md={8}>
           <Card>
             <CardContent>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
@@ -104,7 +104,7 @@ export function UserDashboard() {
         </Grid>
 
         {/* Quick Actions */}
-        <Grid item xs={12} md={4}>
+        <Grid xs={12} md={4}>
           <Stack spacing={2}>
             <Card>
               <CardContent>
@@ -123,7 +123,7 @@ export function UserDashboard() {
         </Grid>
 
         {/* My Organizations */}
-        <Grid item xs={12}>
+        <Grid xs={12}>
           <Typography variant="h6" sx={{ mb: 2 }}>
             My Organizations ({orgs.length})
           </Typography>
@@ -146,7 +146,7 @@ export function UserDashboard() {
           ) : (
             <Grid container spacing={2}>
               {orgs.slice(0, 3).map((org) => (
-                <Grid item xs={12} sm={6} md={4} key={org.id}>
+                <Grid xs={12} sm={6} md={4} key={org.id}>
                   <Card sx={{ height: '100%' }}>
                     <CardContent>
                       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 1 }}>
@@ -172,7 +172,7 @@ export function UserDashboard() {
                 </Grid>
               ))}
               {orgs.length > 3 && (
-                <Grid item xs={12}>
+                <Grid xs={12}>
                   <Button
                     variant="outlined"
                     onClick={() => navigate("/organizations")}
